@@ -1,0 +1,14 @@
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.tef_dist/*
+
+# WorkBuddy 工作区数据（勿上传）
+.workbuddy/
+
+# 本地部署 / 测试产物（可再生成）
+_deploy/
+test_screenshots/
+
+# Node
+node_modules/
