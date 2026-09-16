@@ -5,8 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="Hg59Tqvxw9EmGWqkh5p250" />
 <title>小约翰可汗语录</title>
 <meta name="description" content="通辽宇宙档案馆：收录小约翰可汗视频档案与经典语录，一座可以被浏览和调阅的互联网档案馆。" data-page-node-id="nft6A17XKH3YguI84hxKPD" />
+<meta name="color-scheme" content="light dark" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="通辽宇宙档案馆" />
+<meta property="og:title" content="小约翰可汗语录 · 通辽宇宙档案馆" />
+<meta property="og:description" content="收录 44 期视频 · 552 条语录：奇葩小国、硬核狠人、神奇组织、小约翰四大系列，经典语录标记、全文检索、语录一键直达 B站名场面。" />
+<meta property="og:url" content="https://yulu.csilent.top/" />
+<meta property="og:image" content="https://yulu.csilent.top/photo_webp/peculiar_small_country/Iceland.webp" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" data-page-node-id="bEAou1tLd4xv8FBY8L8VGS" />
 <link rel="stylesheet" href="fonts/dymh/DouyinSansBold/result.css" data-page-node-id="a6GXkmaanqdr9sLhV7mUHi" />
+<script>
+// 防闪烁：body 渲染前先确定主题
+(function(){
+  try {
+    var t = localStorage.getItem("tongliao-theme");
+    if (t === "dark" || (t === null && window.matchMedia("(prefers-color-scheme: dark)").matches)){
+      document.documentElement.className += " theme-dark";
+    }
+  } catch(e){}
+})();
+</script>
 <style>
 /* =========================================================
    通辽宇宙档案馆 · v2
@@ -33,7 +52,78 @@
 
   --w: 1120px;
   --ease: cubic-bezier(.22,.7,.3,1);
+
+  /* 深浅模式共用变量（暗色由 body.dark 覆盖） */
+  --nav-bg: rgba(247,243,234,.94);
+  --shadow-1: rgba(89,72,61,.05);
+  --shadow-2: rgba(89,72,61,.06);
+  --shadow-3: rgba(89,72,61,.07);
+  --shadow-4: rgba(89,72,61,.1);
+  --shadow-h: rgba(89,72,61,.14);
+  --hover-bg: rgba(255,253,248,.9);
+  --qentry-hover: rgba(255,253,248,.85);
+  --cover-border: #FFFDF8;
+  --stamp-text: #FFFDF8;
+  --overlay-dark: rgba(38,35,30,.35);
+  --fig-bg: rgba(38,38,38,.75);
+  --tape-1: rgba(217,154,50,.42);
+  --tape-2: rgba(111,118,80,.32);
+  --sel-border: #E4D6AE;
+  --mark-1: rgba(217,154,50,.4);
+  --mark-2: rgba(217,154,50,.38);
+  --mark-h: rgba(217,154,50,.5);
+  --en-muted: #A8A294;
+  --placeholder: #B3AC9C;
+  --glow: rgba(217,154,50,.45);
 }
+/* ---------- 深色模式：夜读档案馆（深褐纸 + 米字） ---------- */
+body.dark{
+  --paper:      #232019;
+  --paper-2:    #1C1913;
+  --card:       #2A261E;
+  --ink:        #EAE3D2;
+  --ink-soft:   #C9C0AA;
+  --muted:      #948C79;
+  --brick:      #D97B66;
+  --mustard:    #E0AE55;
+  --olive:      #A3AB7E;
+  --brown:      #C4B49E;
+  --selbg:      #35301F;
+  --line:       #4A4231;
+  --line-soft:  #3B3527;
+  --wash:       #2E2A20;
+
+  --nav-bg: rgba(28,25,19,.94);
+  --shadow-1: rgba(0,0,0,.25);
+  --shadow-2: rgba(0,0,0,.28);
+  --shadow-3: rgba(0,0,0,.3);
+  --shadow-4: rgba(0,0,0,.4);
+  --shadow-h: rgba(0,0,0,.5);
+  --hover-bg: rgba(42,38,30,.9);
+  --qentry-hover: rgba(42,38,30,.85);
+  --cover-border: #2A261E;
+  --stamp-text: #232019;
+  --overlay-dark: rgba(12,10,7,.45);
+  --fig-bg: rgba(12,10,7,.72);
+  --tape-1: rgba(224,174,85,.3);
+  --tape-2: rgba(163,171,126,.24);
+  --sel-border: #5A4E2E;
+  --mark-1: rgba(224,174,85,.34);
+  --mark-2: rgba(224,174,85,.3);
+  --mark-h: rgba(224,174,85,.42);
+  --en-muted: #6E6753;
+  --placeholder: #6E6753;
+  --glow: rgba(224,174,85,.35);
+}
+body.dark .tq .stamp, body.dark .sel-quote .stamp{ color:var(--stamp-text); }
+body.dark .acover .play, body.dark .arch-cover .play{ background:var(--overlay-dark); }
+body.dark .acover .fig, body.dark .arch-cover .fig{ background:var(--fig-bg); color:#EAE3D2; }
+body.dark .ticker::before{ background:linear-gradient(90deg, var(--paper-2), transparent); }
+body.dark .ticker::after{ background:linear-gradient(-90deg, var(--paper-2), transparent); }
+body.dark #topnav.scrolled{ background:var(--nav-bg); }
+
+/* 防闪烁：html.theme-dark 时提前上 dark（主脚本再同步到 body） */
+html.theme-dark body{ background:#232019; color:#EAE3D2; }
 
 *{ margin:0; padding:0; box-sizing:border-box; }
 html{ scroll-behavior:smooth; overflow-x:clip; }
@@ -49,7 +139,7 @@ body::before{
   content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
 }
-::selection{ background:rgba(217,154,50,.35); }
+::selection{ background:var(--glow); }
 a{ color:inherit; }
 img{ max-width:100%; display:block; }
 button{ font-family:inherit; cursor:pointer; border:0; background:none; color:inherit; }
@@ -67,14 +157,16 @@ button{ font-family:inherit; cursor:pointer; border:0; background:none; color:in
 }
 #topnav.scrolled{
   padding:9px 0;
-  background:rgba(247,243,234,.94);
+  background:var(--nav-bg);
   border-bottom:1px solid var(--line);
 }
 #topnav .wrap{ display:flex; align-items:center; justify-content:space-between; }
 .brand{ display:flex; align-items:baseline; gap:8px; font-weight:bold; font-size:17px; letter-spacing:.5px; text-decoration:none; }
 .brand .q{ color:var(--brick); font-family:Georgia,serif; font-size:22px; line-height:1; }
 .brand small{ font-family:var(--f-mono); font-size:10px; color:var(--muted); letter-spacing:2px; font-weight:normal; }
-#topnav nav{ display:flex; gap:26px; }
+#topnav nav{
+  display:flex; gap:26px; align-items:center;
+}
 #topnav nav a{
   text-decoration:none; font-size:14px; color:var(--ink-soft); letter-spacing:1px;
   padding:2px 0; border-bottom:2px solid transparent; transition:color .2s, border-color .2s; cursor:pointer;
@@ -207,7 +299,7 @@ section.block{ padding:88px 0 96px; }
 .stat-num{ font-size:clamp(34px, 4.4vw, 50px); font-weight:bold; line-height:1.15; font-variant-numeric:tabular-nums; }
 .stat-num small{ font-size:.4em; color:var(--muted); margin-left:3px; letter-spacing:2px; }
 .stat-cap{ margin-top:6px; font-size:13px; color:var(--muted); letter-spacing:2px; }
-.stat-cap .en{ font-family:var(--f-mono); font-size:10px; letter-spacing:2px; display:block; color:#A8A294; margin-top:1px; }
+.stat-cap .en{ font-family:var(--f-mono); font-size:10px; letter-spacing:2px; display:block; color:var(--en-muted); margin-top:1px; }
 .stat-cell.hl .stat-num{ color:var(--brick); }
 @media (max-width:820px){
   .stats-grid{ grid-template-columns:repeat(2, 1fr); }
@@ -230,7 +322,7 @@ section.block{ padding:88px 0 96px; }
   padding:30px 8px; border-bottom:1px solid var(--line); cursor:pointer;
   transition:background .25s, padding-left .25s;
 }
-.series-row:hover{ background:rgba(255,253,248,.9); padding-left:18px; }
+.series-row:hover{ background:var(--hover-bg); padding-left:18px; }
 .series-row .no{ font-family:var(--f-mono); font-size:13px; letter-spacing:3px; color:var(--muted); }
 .series-row .no b{ display:block; font-size:15px; margin-top:2px; }
 .series-row h3{ font-size:clamp(24px, 3.4vw, 34px); letter-spacing:2px; line-height:1.25; }
@@ -241,7 +333,7 @@ section.block{ padding:88px 0 96px; }
   border:1px solid var(--line); padding:8px 16px; border-radius:2px; white-space:nowrap;
   transition:all .25s; background:var(--card);
 }
-.series-row:hover .go{ background:var(--brick); border-color:var(--brick); color:#FFFDF8; }
+.series-row:hover .go{ background:var(--brick); border-color:var(--brick); color:var(--stamp-text); }
 @media (max-width:760px){
   .series-row{ grid-template-columns:1fr auto; }
   .series-row .no{ grid-column:1 / -1; }
@@ -254,17 +346,17 @@ section.block{ padding:88px 0 96px; }
 .tq{
   background:var(--card); border:1px solid var(--line); border-left:5px solid var(--mustard);
   padding:26px 26px 20px; position:relative; cursor:pointer;
-  box-shadow:2px 3px 0 rgba(89,72,61,.06);
+  box-shadow:2px 3px 0 var(--shadow-2);
   transition:transform .3s var(--ease), box-shadow .3s var(--ease);
 }
-.tq:hover{ transform:translateY(-4px); box-shadow:3px 6px 0 rgba(89,72,61,.1); }
+.tq:hover{ transform:translateY(-4px); box-shadow:3px 6px 0 var(--shadow-4); }
 .tq .stamp{
-  position:absolute; top:-12px; left:22px; background:var(--brick); color:#FFFDF8;
+  position:absolute; top:-12px; left:22px; background:var(--brick); color:var(--stamp-text);
   font-family:var(--f-mono); font-size:10.5px; letter-spacing:2.5px; padding:3px 11px;
   transform:rotate(-2deg);
 }
 .tq .qtext{ font-size:clamp(17px, 1.8vw, 19.5px); line-height:1.7; }
-.tq .qtext .mk{ background:linear-gradient(transparent 62%, rgba(217,154,50,.4) 62%); }
+.tq .qtext .mk{ background:linear-gradient(transparent 62%, var(--mark-1) 62%); }
 .tq .qfoot{
   margin-top:14px; padding-top:12px; border-top:1px dashed var(--line);
   font-family:var(--f-mono); font-size:12px; color:var(--muted); letter-spacing:1px;
@@ -286,7 +378,7 @@ section.block{ padding:88px 0 96px; }
   flex:1; border:0; outline:0; background:transparent; font-family:inherit;
   font-size:15px; color:var(--ink); letter-spacing:.5px;
 }
-.search-box input::placeholder{ color:#B3AC9C; }
+.search-box input::placeholder{ color:var(--placeholder); }
 .chips{ display:flex; flex-wrap:wrap; gap:8px; }
 .chip{
   border:1px solid var(--line); background:var(--paper-2); padding:5px 14px; font-size:13px;
@@ -306,7 +398,7 @@ section.block{ padding:88px 0 96px; }
 .acard{
   background:var(--card); border:1px solid var(--line); overflow:hidden; cursor:pointer;
   display:flex; flex-direction:column; text-decoration:none; position:relative;
-  box-shadow:2px 3px 0 rgba(89,72,61,.05);
+  box-shadow:2px 3px 0 var(--shadow-1);
   transition:transform .38s var(--ease), box-shadow .38s var(--ease);
   /* 入场 */
   opacity:0; transform:translateY(30px);
@@ -314,7 +406,7 @@ section.block{ padding:88px 0 96px; }
 .acard.in{ opacity:1; transform:none; }
 .acard:hover{
   transform:translateY(-6px);
-  box-shadow:4px 10px 22px rgba(89,72,61,.14);
+  box-shadow:4px 10px 22px var(--shadow-h);
 }
 /* 头张 leading 大卡 */
 .acard.lead{ grid-column:span 2; }
@@ -335,11 +427,11 @@ section.block{ padding:88px 0 96px; }
 /* 封面 hover 播放提示（纯装饰，不拦截点击；B站外链由详情页按钮负责） */
 .acover .play{
   position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
-  background:rgba(38,35,30,.35); opacity:0; transition:opacity .35s var(--ease);
-  color:#FFFDF8; text-decoration:none; pointer-events:none;
+  background:var(--overlay-dark); opacity:0; transition:opacity .35s var(--ease);
+  color:#F7F3EA; text-decoration:none; pointer-events:none;
 }
 .acover .play .picon{
-  width:52px; height:52px; border-radius:50%; border:2px solid #FFFDF8;
+  width:52px; height:52px; border-radius:50%; border:2px solid #F7F3EA;
   display:flex; align-items:center; justify-content:center; font-size:19px; padding-left:4px;
 }
 .acover .play .ptxt{ font-family:var(--f-mono); font-size:11px; letter-spacing:2px; }
@@ -375,7 +467,7 @@ section.block{ padding:88px 0 96px; }
 /* ---------- 关于 ---------- */
 #about .about-box{
   border:1px solid var(--line); background:var(--card); padding:40px 44px; max-width:820px;
-  box-shadow:4px 5px 0 rgba(89,72,61,.06); position:relative;
+  box-shadow:4px 5px 0 var(--shadow-2); position:relative;
 }
 #about .about-box::after{
   content:"ARCHIVE NOTE"; position:absolute; top:-11px; left:26px; background:var(--paper);
@@ -395,7 +487,7 @@ footer .f-note{ margin-top:16px; font-size:13px; color:var(--olive); transform:r
 footer .f-meta{
   margin-top:26px; padding-top:18px; border-top:1px solid var(--line-soft);
   display:flex; flex-wrap:wrap; gap:8px 30px; font-family:var(--f-mono);
-  font-size:12px; color:#A8A294; letter-spacing:1px;
+  font-size:12px; color:var(--en-muted); letter-spacing:1px;
 }
 
 /* ---------- 视图切换 ---------- */
@@ -444,17 +536,17 @@ body.view-archive #view-archive{ display:block; }
 
 .arch-cover{
   margin-top:30px; position:relative; border:1px solid var(--line); background:var(--wash);
-  box-shadow:4px 5px 0 rgba(89,72,61,.07); overflow:hidden; display:block; text-decoration:none;
+  box-shadow:4px 5px 0 var(--shadow-3); overflow:hidden; display:block; text-decoration:none;
 }
 .arch-cover img{ width:100%; max-height:460px; object-fit:cover; transition:transform .5s var(--ease); }
 .arch-cover:hover img{ transform:scale(1.02); }
 .arch-cover .play{
   position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  background:rgba(38,35,30,.3); opacity:0; transition:opacity .35s var(--ease);
+  background:var(--overlay-dark); opacity:0; transition:opacity .35s var(--ease);
 }
 .arch-cover:hover .play{ opacity:1; }
 .arch-cover .play .picon{
-  width:64px; height:64px; border-radius:50%; border:2px solid #FFFDF8; color:#FFFDF8;
+  width:64px; height:64px; border-radius:50%; border:2px solid #F7F3EA; color:#F7F3EA;
   display:flex; align-items:center; justify-content:center; font-size:22px; padding-left:5px;
 }
 .arch-cover .fig{
@@ -475,7 +567,7 @@ body.view-archive #view-archive{ display:block; }
 }
 .btn:hover{ background:var(--ink); color:var(--paper); transform:translateY(-1px); }
 .btn.red{ border-color:var(--brick); color:var(--brick); }
-.btn.red:hover{ background:var(--brick); color:#FFFDF8; }
+.btn.red:hover{ background:var(--brick); color:var(--stamp-text); }
 
 /* 语录区 */
 .q-sec-label{
@@ -487,11 +579,11 @@ body.view-archive #view-archive{ display:block; }
 /* 精选语录（SELECTED QUOTE） */
 .sel-quote{
   position:relative; margin-top:24px; background:var(--selbg);
-  border:1px solid #E4D6AE; border-left:5px solid var(--brick);
-  padding:30px 34px 22px; box-shadow:2px 3px 0 rgba(89,72,61,.07);
+  border:1px solid var(--sel-border); border-left:5px solid var(--brick);
+  padding:30px 34px 22px; box-shadow:2px 3px 0 var(--shadow-3);
 }
 .sel-quote .stamp{
-  position:absolute; top:-12px; left:22px; background:var(--brick); color:#FFFDF8;
+  position:absolute; top:-12px; left:22px; background:var(--brick); color:var(--stamp-text);
   font-family:var(--f-mono); font-size:10.5px; letter-spacing:2.5px; padding:3px 11px;
   transform:rotate(-1.5deg);
 }
@@ -500,7 +592,7 @@ body.view-archive #view-archive{ display:block; }
   transform:rotate(2.5deg);
 }
 .sel-quote .sq{ font-size:clamp(20px, 2.6vw, 26px); line-height:1.7; letter-spacing:.5px; }
-.sel-quote .sq .mk{ background:linear-gradient(transparent 62%, rgba(217,154,50,.4) 62%); }
+.sel-quote .sq .mk{ background:linear-gradient(transparent 62%, var(--mark-1) 62%); }
 .sel-quote .sqfoot{ margin-top:12px; font-family:var(--f-mono); font-size:11.5px; color:var(--brown); letter-spacing:1px; }
 
 /* 普通语录条目 */
@@ -514,7 +606,7 @@ body.view-archive #view-archive{ display:block; }
 .qentry .eno{ font-family:var(--f-mono); font-size:11.5px; letter-spacing:1.5px; color:var(--muted); }
 .qentry .eno .star{ color:var(--brick); }
 .qentry .etext{ font-size:17px; line-height:1.8; letter-spacing:.4px; }
-.qentry .etext .mk{ background:linear-gradient(transparent 60%, rgba(217,154,50,.38) 60%); }
+.qentry .etext .mk{ background:linear-gradient(transparent 60%, var(--mark-2) 60%); }
 .qentry .etext .ref-link{ color:var(--olive); border-bottom:1px dashed var(--olive); text-decoration:none; transition:color .2s; white-space:nowrap; }
 .qentry .etext .ref-link:hover{ color:var(--brick); border-color:var(--brick); }
 @media (max-width:640px){
@@ -553,12 +645,200 @@ body.view-archive #view-archive{ display:block; }
 @keyframes flipOutL{ to{ opacity:0; transform:translateX(-36px); } }
 @keyframes flipOutR{ to{ opacity:0; transform:translateX(36px); } }
 
+/* ---------- 详情页装饰优化 ---------- */
+/* 返回链接：纸质标签质感 */
+.back-link{
+  border:1px solid var(--line); background:var(--card); padding:7px 16px 7px 12px;
+  border-radius:2px; box-shadow:2px 2px 0 var(--shadow-3);
+  transition:all .25s var(--ease);
+}
+.back-link:hover{
+  color:var(--brick); border-color:var(--brick); background:var(--selbg);
+  transform:translateX(-3px); box-shadow:3px 3px 0 rgba(184,74,58,.12);
+}
+
+/* 档案题头：编号水印 */
+.arch-head{ position:relative; }
+.arch-head::after{
+  content:attr(data-fileno); position:absolute; right:0; top:-8px;
+  font-family:var(--f-mono); font-size:clamp(40px, 7vw, 84px); letter-spacing:4px;
+  color:var(--ink); opacity:.05; pointer-events:none; user-select:none; line-height:1;
+}
+@media (max-width:760px){ .arch-head::after{ display:none; } }
+
+/* 封面：档案照片质感（白边相纸 + 轻微倾斜） */
+.arch-cover{
+  border:6px solid var(--cover-border); outline:1px solid var(--line);
+  box-shadow:3px 5px 0 var(--shadow-4);
+  transform:rotate(-.35deg);
+  transition:transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.arch-cover:hover{ transform:rotate(0deg) scale(1.004); box-shadow:5px 9px 18px var(--shadow-h); }
+.arch-cover .fig{ top:14px; left:14px; }
+
+/* 语录条目：hover 主体感 */
+.qentry{
+  border-left:3px solid transparent; padding-left:14px;
+  transition:opacity .5s var(--ease), transform .5s var(--ease),
+             border-color .25s, background .25s, padding-left .25s;
+}
+.qentry:hover{
+  border-left-color:var(--mustard); background:var(--qentry-hover);
+  padding-left:20px;
+}
+.qentry:hover .etext .mk{ background:linear-gradient(transparent 55%, var(--mark-h) 55%); }
+
+/* 精选语录：馆长手写批注 hover 活起来 */
+.sel-quote .hand-note{ transition:transform .3s var(--ease); }
+.sel-quote:hover .hand-note{ transform:rotate(-1deg) scale(1.05); }
+
+/* 档案事实行：分隔点 */
+.arch-facts span + span::before{ content:"· "; color:var(--line); }
+
+/* 相关档案卡：折角 */
+.rel-card{ position:relative; }
+.rel-card::after{
+  content:""; position:absolute; right:0; top:0; width:0; height:0;
+  border-top:10px solid var(--line); border-left:10px solid transparent;
+  transition:border-color .25s;
+}
+.rel-card:hover::after{ border-top-color:var(--brick); }
+
+/* 上一份/下一份：hover 标签位移 */
+.pn .pk{ transition:transform .25s var(--ease); }
+.pn:hover .pk{ transform:translateX(-4px); }
+.pn.next:hover .pk{ transform:translateX(4px); }
+
+/* 语录时间戳跳转 */
+.tstamp{
+  display:inline-flex; align-items:center; gap:4px; margin-left:8px; padding:0 7px;
+  font-family:var(--f-mono); font-size:11px; letter-spacing:1px; color:var(--olive);
+  border:1px dashed var(--olive); border-radius:2px; text-decoration:none;
+  vertical-align:middle; white-space:nowrap; transition:all .2s;
+}
+.tstamp:hover{ color:var(--brick); border-color:var(--brick); background:var(--selbg); }
+.tstamp::before{ content:"▶"; font-size:9px; }
+
+/* 分享锚点：目标语录高亮闪烁 */
+@keyframes quoteGlow{
+  0%{ background:var(--glow); border-left-color:var(--brick); }
+  100%{ background:transparent; }
+}
+.qentry.anchor-hit, .sel-quote.anchor-hit{ animation:quoteGlow 2.2s var(--ease) 1; }
+
+/* 随机调阅 */
+.random-btn{
+  display:inline-flex; align-items:center; gap:9px; cursor:pointer; text-decoration:none;
+  border:1.5px dashed var(--brick); color:var(--brick); background:var(--card);
+  padding:9px 20px; font-size:14px; letter-spacing:2px; border-radius:2px;
+  transition:all .25s var(--ease); user-select:none;
+}
+.random-btn .dice{ font-size:16px; display:inline-block; transition:transform .4s var(--ease); }
+.random-btn:hover{ background:var(--brick); color:var(--stamp-text); border-style:solid; }
+.random-btn:hover .dice{ transform:rotate(180deg) scale(1.15); }
+.random-btn:active{ transform:scale(.97); }
+
+/* 语录复制按钮 */
+.copy-q{
+  display:inline-flex; align-items:center; gap:4px; margin-left:10px; padding:1px 8px;
+  font-family:var(--f-mono); font-size:11px; letter-spacing:1px; color:var(--muted);
+  border:1px solid var(--line); background:var(--card); border-radius:2px;
+  opacity:0; transform:translateY(1px);
+  transition:all .25s var(--ease); vertical-align:middle;
+}
+.qentry:hover .copy-q, .sel-quote .copy-q{ opacity:1; transform:none; }
+.copy-q:hover{ color:var(--brick); border-color:var(--brick); background:var(--selbg); }
+.copy-q.done{ color:var(--olive); border-color:var(--olive); opacity:1; }
+@media (hover:none){ .copy-q{ opacity:.6; } }
+@media (max-width:640px){ .copy-q{ opacity:.6; } }
+
+/* ---------- GitHub 跳转 ---------- */
+#topnav nav a.gh{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:2px 0; border-bottom:2px solid transparent;
+}
+#topnav nav a.gh svg{ width:16px; height:16px; fill:currentColor; flex:none; position:relative; top:1px; }
+#topnav nav a.gh:hover{ color:var(--brick); border-bottom-color:var(--brick); }
+@media (max-width:640px){ #topnav nav a.gh .gh-txt{ display:none; } }
+
+/* 主题切换按钮 */
+#theme-toggle{
+  font-size:15px; line-height:1; padding:2px 0;
+  color:var(--ink-soft); transition:color .2s, transform .3s var(--ease);
+}
+#theme-toggle:hover{ color:var(--brick); transform:rotate(-14deg) scale(1.12); }
+#theme-toggle .ti{ display:inline-block; }
+
+/* 阅读进度条 */
+#read-progress{
+  position:fixed; top:0; left:0; height:3px; width:0; z-index:70;
+  background:linear-gradient(90deg, var(--brick), var(--mustard));
+  pointer-events:none; transition:width .08s linear;
+}
+
+/* 回到卷首 */
+#back-top{
+  position:fixed; right:26px; bottom:30px; z-index:65;
+  width:46px; height:46px; border:1.5px solid var(--ink); background:var(--card);
+  font-family:var(--f-mono); font-size:16px; color:var(--ink); border-radius:2px;
+  box-shadow:2px 3px 0 var(--shadow-h);
+  opacity:0; pointer-events:none; transform:translateY(14px);
+  transition:all .35s var(--ease);
+}
+#back-top.show{ opacity:1; pointer-events:auto; transform:none; }
+#back-top:hover{ background:var(--ink); color:var(--paper); transform:translateY(-2px); }
+@media (max-width:640px){ #back-top{ right:16px; bottom:20px; } }
+
+/* ---------- 档案快讯（跑马灯） ---------- */
+.ticker{
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  background:var(--card); overflow:hidden; position:relative;
+}
+.ticker::before, .ticker::after{
+  content:""; position:absolute; top:0; bottom:0; width:60px; z-index:2; pointer-events:none;
+}
+.ticker::before{ left:0; background:linear-gradient(90deg, var(--paper), transparent); }
+.ticker::after{ right:0; background:linear-gradient(-90deg, var(--paper), transparent); }
+.ticker-track{ display:flex; width:max-content; animation:tick 46s linear infinite; }
+.ticker:hover .ticker-track{ animation-play-state:paused; }
+.ticker-track span{
+  padding:11px 30px; font-family:var(--f-mono); font-size:12.5px; letter-spacing:2px;
+  color:var(--muted); white-space:nowrap;
+}
+.ticker-track span + span{ border-left:1px dashed var(--line-soft); }
+@keyframes tick{ to{ transform:translateX(-50%); } }
+
+/* ---------- 纸胶带装饰 ---------- */
+.tq::before, .sel-quote::before, #about .about-box::before{
+  content:""; position:absolute; top:-11px; left:50%; width:94px; height:22px; z-index:3;
+  background:var(--tape-1);
+  transform:translateX(-50%) rotate(-2.5deg);
+  clip-path:polygon(3% 0, 97% 5%, 100% 100%, 0 94%);
+  box-shadow:0 1px 2px var(--shadow-h); pointer-events:none;
+}
+#about .about-box::before{ transform:translateX(-50%) rotate(2deg); background:var(--tape-2); }
+.tq .stamp{ transition:transform .3s var(--ease); }
+.tq:hover .stamp{ transform:rotate(1.5deg) scale(1.06); }
+
+/* 印章轻微摇摆 */
+@keyframes sealSway{ 0%,100%{ transform:rotate(7deg); } 50%{ transform:rotate(12deg); } }
+@media (prefers-reduced-motion:no-preference){ .seal{ animation:sealSway 7s ease-in-out infinite; } }
+
+/* 系列行箭头滑动 */
+.series-row .go{ transition:all .25s var(--ease); }
+.series-row:hover .go{ letter-spacing:3px; }
+
+/* 精选语录卡 hover 微倾 */
+.tq:hover{ transform:translateY(-4px) rotate(-.4deg); }
+
 /* ---------- 动效降级 ---------- */
 @media (prefers-reduced-motion:reduce){
   *, *::before, *::after{
     animation:none !important; transition:none !important;
   }
   .reveal,.reveal-l,.reveal-r,.acard,.qentry,.ha{ opacity:1 !important; transform:none !important; }
+  #read-progress{ transition:none !important; }
+  #back-top{ transition:none !important; }
   html{ scroll-behavior:auto; }
 }
 </style>
@@ -575,6 +855,12 @@ body.view-archive #view-archive{ display:block; }
       <a href="#series" data-page-node-id="bGO4pQbsU31xeOiwkNd0P8">系列</a>
       <a href="#stats" data-page-node-id="NtEVmauv5wEdORz8ECxCdT">统计</a>
       <a href="#about" data-page-node-id="jkDMLLfA6HeQDzpjuFlAje">关于</a>
+      <a href="#random" id="nav-random" title="随机调阅一份档案">⚄ 随机</a>
+      <button id="theme-toggle" title="切换日间 / 夜读模式" aria-label="切换日间 / 夜读模式"><span class="ti">☾</span></button>
+      <a class="gh" href="https://github.com/csilenti/tongliao-archive" target="_blank" rel="noopener" title="GitHub 项目仓库" data-page-node-id="ghLinkNav">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span class="gh-txt">GitHub</span>
+      </a>
     </nav>
   </div>
 </header>
@@ -613,6 +899,11 @@ body.view-archive #view-archive{ display:block; }
           <span class="tag" data-page-node-id="eqizUORORaYCli9mT8z5kg">OPEN ACCESS</span>
         </div>
         <div class="hero-facts mono ha d4" id="hero-facts" data-page-node-id="1OXa70xAoV789HcYrpPLfH"></div>
+        <div class="ha d4" style="margin-top:22px;">
+          <button class="random-btn" id="random-btn" title="随机抽一份档案调阅">
+            <span class="dice">⚄</span> 随机调阅一份档案
+          </button>
+        </div>
       </div>
       <div class="margin-note" data-page-node-id="W3rOZ2BSuhHvHBOiPEGoLE">本馆以「期」为单位建档：先有档案，后有语录</div>
       <div class="margin-note right" data-page-node-id="6nHHvObnjTi6utYnI4F66A">调阅方式：点击任意一份档案卡</div>
@@ -659,6 +950,11 @@ body.view-archive #view-archive{ display:block; }
     </div>
   </section>
 
+  <!-- 档案快讯 -->
+  <div class="ticker" aria-hidden="true" data-page-node-id="tickerBar">
+    <div class="ticker-track" id="ticker-track"></div>
+  </div>
+
   <!-- 全部档案 -->
   <section class="block" id="archives" data-page-node-id="PcbncMfeQMFwVhYdrniAxK">
     <div class="wrap" data-page-node-id="oGfi4vTSZPGjogPMoBLcmT">
@@ -689,7 +985,7 @@ body.view-archive #view-archive{ display:block; }
       <div class="about-box reveal" data-page-node-id="xZuEpoFrmq49Ci0rbl645l">
         <p data-page-node-id="On1OFEEDzFphaM2kQMrYEi"><b data-page-node-id="Hby4zkqIoAT9VInfLyiBsY">通辽宇宙档案馆</b>，是一座由粉丝一砖一瓦整理出来的互联网档案馆。馆内以「期」为单位建档：一份档案对应 @小约翰可汗 的一期视频，档案之内才是逐条抄录的语录，未做任何改写与润色。</p>
         <p data-page-node-id="eHdu45LUiZIxJ1wKMx4aBs">档案之间互相关联——语录里提到的「奇葩小国43」「硬核狠人26」等期数，均已自动识别为内部链接。调阅一份档案时，相关档案也会一并列出。毕竟通辽宇宙，万物互联。</p>
-        <p data-page-node-id="89AvFGXf7UAzxBA3Oev3bw">每一份档案都挂着 B 站传送门，点「▶ 观看 B站原视频」直达原始资料。</p>
+        <p data-page-node-id="89AvFGXf7UAzxBA3Oev3bw">每一份档案都挂着 B 站传送门，点「▶ 观看 B站原视频」直达原始资料。本馆已开源，源代码托管在 <a class="ref-link" href="https://github.com/csilenti/tongliao-archive" target="_blank" rel="noopener">GitHub · tongliao-archive</a>，欢迎 Star 与指正。</p>
         <p class="fine" data-page-node-id="NhMjh21PuivRz5SczJSHJz">数据来源：个人逐条整理 ｜ 视频版权归原作者及相关权利方所有 ｜ 本站仅用于语录整理与学习交流</p>
       </div>
     </div>
@@ -706,6 +1002,12 @@ body.view-archive #view-archive{ display:block; }
     <div class="f-brand" data-page-node-id="U9oqPhIx25oHxPyyDTBVyL"><span class="q" data-page-node-id="c8H2Us8DCgVUFzXjdHBhAX">&ldquo;</span> 通辽宇宙档案馆</div>
     <div class="f-slogan" data-page-node-id="kKojDRGIkLVzMXiJRqCT6d">记录那些值得反复回味的句子。</div>
     <div class="f-note" data-page-node-id="oDhdOUYdRAbk007BECQB0q">✎ 本档案仍在持续更新……可汗更新一期，这里就厚一份档案。</div>
+    <div style="margin-top:18px;">
+      <a class="btn" href="https://github.com/csilenti/tongliao-archive" target="_blank" rel="noopener" style="gap:9px;" data-page-node-id="ghLinkFooter">
+        <svg viewBox="0 0 16 16" aria-hidden="true" style="width:16px;height:16px;fill:currentColor;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub · tongliao-archive
+      </a>
+    </div>
     <div class="f-meta" data-page-node-id="yJGgP67a6kHTuCxFAHf8CO">
       <span data-page-node-id="SoLPK1NfRFrd5D3YKBTzUE">DATA SOURCE · 个人整理</span>
       <span data-page-node-id="xeOByhQp3h7yANPVVopV1v">COPYRIGHT · 视频版权归原作者及相关权利方所有</span>
@@ -714,6 +1016,10 @@ body.view-archive #view-archive{ display:block; }
     </div>
   </div>
 </footer>
+
+<!-- 阅读进度条 / 回到卷首 -->
+<div id="read-progress" data-page-node-id="readProgress"></div>
+<button id="back-top" title="回到卷首" aria-label="回到卷首" data-page-node-id="backTop">↑</button>
 
 <!-- 调阅转场 -->
 <div id="page-badge" data-page-node-id="0nUYNrcE18dRkpmxYWtwWi">
@@ -741,6 +1047,23 @@ const pad3 = (n) => String(n).padStart(3, "0");
 const SERIES_EN = { "奇葩小国":"ODD NATIONS", "硬核狠人":"HARDCORE ARCHIVE", "神奇组织":"ODD ORGANIZATIONS", "小约翰":"LITTLE JOHN" };
 const SERIES_SYM = { "奇葩小国":"🌐", "硬核狠人":"⚔", "神奇组织":"🏛", "小约翰":"📼" };
 const bilibiliUrl = (bvid) => "https://www.bilibili.com/video/" + bvid;
+// "5min" / "13:44" → B站 ?t= 秒数
+function bilibiliUrlT(bvid, time){
+  if (!bvid) return "";
+  let sec = null;
+  let m = String(time || "").match(/(\d{1,2}):(\d{2})/);
+  if (m) sec = parseInt(m[1], 10) * 60 + parseInt(m[2], 10);
+  else {
+    m = String(time || "").match(/(\d+)\s*min/i);
+    if (m) sec = parseInt(m[1], 10) * 60;
+  }
+  return sec ? bilibiliUrl(bvid) + "?t=" + sec : bilibiliUrl(bvid);
+}
+// 封面取图：优先缩略图（列表）/ WebP 大图（详情），PNG 兜底
+function coverSrc(e, size){
+  if (size === "big") return e.coverWebp || e.cover;
+  return e.coverThumb || e.coverWebp || e.cover;
+}
 
 function renderQuoteText(q){
   let html = "";
@@ -764,16 +1087,79 @@ function epKicker(e){
   return (SERIES_EN[e.series] || "ARCHIVE") + (e.ep != null ? " · ARCHIVE " + pad3(e.ep) : " · PERSONAL FILE");
 }
 function fileNo(e){ return "FILE NO." + pad3(e.fileIdx); }
+// 时间戳跳转按钮：有时间标记且所属档案有 BV 号才显示
+function tstampHTML(q){
+  const e = episodes[q.episodeId];
+  if (!q.time || !e || !e.bvid) return "";
+  return '<a class="tstamp" href="' + bilibiliUrlT(e.bvid, q.time) + '" target="_blank" rel="noopener" title="跳到 B站视频对应时刻">' + esc(q.time) + "</a>";
+}
 
 // 全局档案顺序（按系列顺序），并分配 FILE NO.
 const epIds = Object.keys(episodes);
 epIds.forEach((id, i) => { episodes[id].fileIdx = i + 1; });
 
+/* ---------- 主题（夜读模式） ---------- */
+const THEME_KEY = "tongliao-theme";
+(function initTheme(){
+  // head 内防闪烁脚本已在 html 上标了 theme-dark，这里同步到 body
+  if (document.documentElement.classList.contains("theme-dark")){
+    document.body.classList.add("dark");
+  }
+  let saved = null;
+  try { saved = localStorage.getItem(THEME_KEY); } catch(e){}
+  if (saved === null && window.matchMedia("(prefers-color-scheme: dark)").matches){
+    document.body.classList.add("dark");
+  }
+  const syncIcon = () => {
+    const dark = document.body.classList.contains("dark");
+    document.querySelector("#theme-toggle .ti").textContent = dark ? "☀" : "☾";
+  };
+  syncIcon();
+  document.getElementById("theme-toggle").addEventListener("click", () => {
+    // 过渡期间给整体加个淡入淡出
+    document.documentElement.style.transition = "background-color .3s";
+    const dark = document.body.classList.toggle("dark");
+    try { localStorage.setItem(THEME_KEY, dark ? "dark" : "light"); } catch(e){}
+    syncIcon();
+  });
+})();
+
 /* ---------- 导航 ---------- */
 const topnav = $("#topnav");
-const onScroll = () => topnav.classList.toggle("scrolled", window.scrollY > 40);
-window.addEventListener("scroll", onScroll, { passive:true });
-onScroll();
+
+/* ---------- 档案快讯（跑马灯） ---------- */
+(function(){
+  const items = [];
+  // 最新的几份档案
+  for (let i = Math.max(0, epIds.length - 6); i < epIds.length; i++){
+    const e = episodes[epIds[i]];
+    items.push("NEW · " + fileNo(e) + " " + epLabel(e) + "《" + e.subject + "》");
+  }
+  // 经典语录挑两条
+  let c = 0;
+  for (const q of quotes){
+    if (q.classic && c < 2){ items.push("SELECTED · “" + q.text.slice(0, 18) + (q.text.length > 18 ? "…" : "") + "” —— " + epLabel(episodes[q.episodeId])); c++; }
+  }
+  // 馆藏概况
+  items.push("COLLECTION · 现藏档案 " + stats.episodeCount + " 份 · 语录 " + stats.quoteCount + " 条");
+  items.push("OPEN SOURCE · github.com/csilenti/tongliao-archive");
+  const half = items.map((t) => "<span>" + esc(t) + "</span>").join("");
+  $("#ticker-track").innerHTML = half + half; // 复制一份实现无缝循环
+})();
+
+/* ---------- 阅读进度条 + 回到卷首 ---------- */
+const readProgress = $("#read-progress");
+const backTop = $("#back-top");
+function onScrollUI(){
+  const st = window.scrollY;
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  readProgress.style.width = (h > 0 ? Math.min(100, (st / h) * 100) : 0) + "%";
+  backTop.classList.toggle("show", st > 640);
+  topnav.classList.toggle("scrolled", st > 40);
+}
+window.addEventListener("scroll", onScrollUI, { passive:true });
+onScrollUI();
+backTop.addEventListener("click", () => window.scrollTo({ top:0, behavior: REDUCED ? "auto" : "smooth" }));
 
 /* ---------- Hero ---------- */
 $("#hero-facts").innerHTML =
@@ -874,14 +1260,15 @@ const cio = new IntersectionObserver((entries) => {
     if (found.length >= 3) break;
     if (q.classic && found.indexOf(q) === -1) found.push(q);
   }
-  $("#top-quotes").innerHTML = found.map((q) =>
-    '<div class="tq reveal" data-ep="' + q.episodeId + '">' +
+  $("#top-quotes").innerHTML = found.map((q) => {
+    const e = episodes[q.episodeId];
+    return '<div class="tq reveal" data-ep="' + q.episodeId + '">' +
       '<span class="stamp">SELECTED</span>' +
       '<div class="qtext">“' + renderQuoteText(q) + '”</div>' +
-      '<div class="qfoot"><span>' + esc(q.series + (q.ep != null ? q.ep : "")) + " · " + esc(q.subject) + "</span>" +
+      '<div class="qfoot"><span>' + esc(epLabel(e)) + " · " + esc(e.subject) + "</span>" +
       '<span class="go">调阅档案 →</span></div>' +
-    "</div>"
-  ).join("");
+    "</div>";
+  }).join("");
   $("#top-quotes").addEventListener("click", (ev) => {
     const card = ev.target.closest(".tq");
     if (card) location.hash = "#/archive/" + card.dataset.ep;
@@ -943,7 +1330,7 @@ function cardHTML(id, i, lead){
   const qs = (e.quotes || []).length;
   return '<a class="acard' + (lead ? " lead" : "") + '" data-ep="' + id + '" data-stagger="' + (i % 9) + '" href="#/archive/' + id + '">' +
     '<div class="acover">' +
-      (e.cover ? '<img src="' + e.cover + '" alt="' + esc(e.subject) + '" loading="lazy" />' : "") +
+      (e.cover ? '<img src="' + coverSrc(e) + '" alt="' + esc(e.subject) + '" loading="lazy" />' : "") +
       '<span class="fig mono">' + fileNo(e) + "</span>" +
       (e.bvid ? '<span class="play" data-bv="' + esc(e.bvid) + '"><span class="picon">▶</span><span class="ptxt">观看原视频</span></span>' : "") +
     "</div>" +
@@ -1013,7 +1400,7 @@ function archiveHTML(id){
 
   return '<div class="wrap">' +
     '<a class="back-link" href="#/">← 返回档案大厅</a>' +
-    '<div class="arch-head">' +
+    '<div class="arch-head" data-fileno="' + fileNo(e) + '">' +
       '<div class="arch-kicker mono">' + epKicker(e) + " · " + fileNo(e) + "</div>" +
       '<h1 class="arch-title">' + esc(e.subject) + "</h1>" +
       '<div class="arch-sub"><b>' + esc(e.series) + "</b>" + (e.ep != null ? " · 第 " + e.ep + " 期" : "") +
@@ -1022,7 +1409,7 @@ function archiveHTML(id){
     '<div class="arch-rule"></div>' +
 
     (e.cover ? '<a class="arch-cover" href="' + bilibiliUrl(e.bvid) + '" target="_blank" rel="noopener">' +
-      '<img src="' + e.cover + '" alt="' + esc(e.subject) + '" />' +
+      '<img src="' + coverSrc(e, "big") + '" alt="' + esc(e.subject) + '" />' +
       '<span class="fig mono">' + esc(epLabel(e)) + "</span>" +
       '<span class="play"><span class="picon">▶</span></span></a>' : "") +
 
@@ -1042,11 +1429,14 @@ function archiveHTML(id){
     (sel.length
       ? '<div class="q-sec-label">SELECTED QUOTES · 精选语录</div>' +
         sel.map((q) =>
-          '<div class="sel-quote">' +
+          '<div class="sel-quote" id="q-' + q.nInEp + '">' +
             '<span class="stamp">SELECTED QUOTE</span>' +
             '<span class="hand-note">✎ 馆长划重点</span>' +
-            '<div class="sq">“' + renderQuoteText(q) + '”</div>' +
-            '<div class="sqfoot mono">QUOTE ' + pad3(q.nInEp) + " · " + esc(epLabel(e)) + "</div>" +
+            '<div class="sq">“' + renderQuoteText(q) + '”' + tstampHTML(q) + '</div>' +
+            '<div class="sqfoot mono">QUOTE ' + pad3(q.nInEp) + " · " + esc(epLabel(e)) +
+              '<button class="copy-q" data-q="' + esc(q.text) + '" title="复制这条语录">⧉ 复制</button>' +
+              '<button class="copy-q share-q" data-share="' + q.nInEp + '" title="复制本条语录的分享链接">↗ 分享</button>' +
+            "</div>" +
           "</div>"
         ).join("")
       : "") +
@@ -1054,9 +1444,9 @@ function archiveHTML(id){
     '<div class="q-sec-label">QUOTE RECORD · 本期全部语录（' + normal.length + "）</div>" +
     (normal.length
       ? normal.map((q, i) =>
-          '<div class="qentry" data-stagger="' + (i % 9) + '">' +
+          '<div class="qentry" id="q-' + q.nInEp + '" data-stagger="' + (i % 9) + '">' +
             '<span class="eno mono">' + (q.classic ? '<span class="star">★</span> ' : "") + "QUOTE " + pad3(q.nInEp) + "</span>" +
-            '<span class="etext">“' + renderQuoteText(q) + "”</span>" +
+            '<span class="etext">“' + renderQuoteText(q) + '”' + tstampHTML(q) + '<button class="copy-q" data-q="' + esc(q.text) + '" title="复制这条语录">⧉</button><button class="copy-q share-q" data-share="' + q.nInEp + '" title="复制本条语录的分享链接">↗</button></span>' +
           "</div>"
         ).join("")
       : '<div class="rel-empty">本档语录已全部进入精选区。</div>') +
@@ -1090,6 +1480,34 @@ function bindArchiveEvents(){
     const first = viewArchive.querySelector(".q-sec-label");
     if (first) first.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth" });
   });
+  // 复制语录 / 分享语录锚点链接
+  viewArchive.querySelectorAll(".copy-q").forEach((btn) => {
+    btn.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      let payload = btn.dataset.q;
+      if (btn.classList.contains("share-q")){
+        // #/archive/<id>?q=<nInEp> → 分享链接
+        payload = location.href.split("#")[0] + "#/archive/" + currentArchiveId + "?q=" + btn.dataset.share;
+      }
+      const done = () => {
+        btn.classList.add("done");
+        const old = btn.textContent;
+        btn.textContent = "✓ 已复制";
+        setTimeout(() => { btn.classList.remove("done"); btn.textContent = old; }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(payload).then(done).catch(() => {});
+      } else {
+        const ta = document.createElement("textarea");
+        ta.value = payload;
+        ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); done(); } catch(err){}
+        document.body.removeChild(ta);
+      }
+    });
+  });
   // 语录依次进入
   observeReveals();
 }
@@ -1105,7 +1523,7 @@ function showBadge(no){
   badgeTimer = setTimeout(() => badge.classList.remove("show"), 480);
 }
 
-function renderArchive(id, dir){
+function renderArchive(id, dir, anchorQ){
   if (!episodes[id]) { location.hash = "#/"; return; }
   currentArchiveId = id;
   viewArchive.innerHTML = archiveHTML(id);
@@ -1115,8 +1533,20 @@ function renderArchive(id, dir){
   void viewArchive.offsetWidth;
   viewArchive.classList.add(dir === "r" ? "enter-from-right" : "enter");
   bindArchiveEvents();
-  window.scrollTo(0, 0);
   document.title = epLabel(episodes[id]) + " · " + episodes[id].subject + " - 小约翰可汗语录";
+  // 分享锚点：#/archive/xxx?q=N → 滚动到该语录并高亮
+  if (anchorQ != null){
+    const el = document.getElementById("q-" + anchorQ);
+    if (el){
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block:"center" });
+        el.classList.add("anchor-hit");
+        setTimeout(() => el.classList.remove("anchor-hit"), 2400);
+      }, 120);
+      return;
+    }
+  }
+  window.scrollTo(0, 0);
 }
 
 function goHome(anchor, animate){
@@ -1140,19 +1570,50 @@ function goAnchor(sel){
   if (el) el.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth" });
 }
 
+/* ---------- 随机调阅 ---------- */
+function randomArchive(){
+  const ids = epIds;
+  if (!ids.length) return;
+  let pick = ids[Math.floor(Math.random() * ids.length)];
+  // 详情页内点随机 → 避免抽到当前这份
+  if (currentArchiveId && ids.length > 1){
+    while (pick === currentArchiveId) pick = ids[Math.floor(Math.random() * ids.length)];
+  }
+  pendingDir = "r";
+  location.hash = "#/archive/" + pick;
+}
+$("#random-btn").addEventListener("click", randomArchive);
+$("#nav-random").addEventListener("click", (ev) => {
+  ev.preventDefault();
+  randomArchive();
+});
+
 /* ---------- 路由 ---------- */
 function route(){
   const h = location.hash || "#/";
-  const m = h.match(/^#\/archive\/([^?]+)/);
+  const m = h.match(/^#\/archive\/([^?]+)(?:\?q=(\d+))?/);
   if (m){
     const id = decodeURIComponent(m[1]);
-    if (currentArchiveId === id) return;
+    const anchorQ = m[2] != null ? parseInt(m[2], 10) : null;
+    // 同一档案内 ?q= 变化（点分享链接/再点一次）→ 只滚动高亮，不重渲染
+    if (currentArchiveId === id){
+      if (anchorQ != null){
+        const el = document.getElementById("q-" + anchorQ);
+        if (el){
+          el.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block:"center" });
+          el.classList.remove("anchor-hit"); void el.offsetWidth;
+          el.classList.add("anchor-hit");
+          setTimeout(() => el.classList.remove("anchor-hit"), 2400);
+        }
+      }
+      return;
+    }
     const e = episodes[id];
     const dir = pendingDir; pendingDir = null;
     if (document.body.classList.contains("view-home")) savedScroll = window.scrollY;
     showBadge(e ? (e.ep != null ? pad3(e.ep) : pad3(e.fileIdx)) : "000");
     setTimeout(() => {
-      renderArchive(id, dir);
+      renderArchive(id, dir, anchorQ);
     }, REDUCED ? 0 : 260);
   } else {
     const anchor = (h && h !== "#/" && h !== "#") ? h : null;

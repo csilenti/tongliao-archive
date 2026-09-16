@@ -1,5 +1,5 @@
 // build-data.js
-// 解析 小约翰可汗语录.md → data.json / data.js（不改写 Markdown 原文）
+// 解析 小约翰可汗语录.md → data.js（不改写 Markdown 原文）
 //
 // 语义保留：
 //   * **粗体** 语录      → isClassic = true，segments 保留粗体片段
@@ -21,6 +21,14 @@ function toWebPath(p) {
   const m = s.match(/(?:^|\/)(photo\/.*)$/i);
   if (m) s = m[1];
   return s;
+}
+// png 原图路径 → WebP 路径（build-webp.py 的输出结构）
+// photo/xxx.png → photo_webp/xxx.webp；photo/a/b.png → photo_webp/a/b.webp
+// 缩略图（列表卡片用）：photo_webp/thumb/...
+function toWebpPaths(webPath) {
+  if (!webPath || !/\.png$/i.test(webPath)) return { big: '', thumb: '' };
+  const rel = webPath.replace(/^photo\//i, '').replace(/\.png$/i, '');
+  return { big: 'photo_webp/' + rel + '.webp', thumb: 'photo_webp/thumb/' + rel + '.webp' };
 }
 function extractCoverPath(line) {
   const m = line.match(/!\[[^\]]*\]\(([^)]+)\)/);
@@ -92,6 +100,8 @@ for (const rawLine of lines) {
       description: '',
       bvid: '',
       cover: '',
+      coverWebp: '',
+      coverThumb: '',
       quotesRaw: [], // [{n, text}]
     };
     if (currentSeries) currentSeries.videos.push(currentEp);
@@ -160,6 +170,9 @@ for (const s of seriesOrder) {
     ep.series = s.name;
     ep.seriesId = sId;
     ep.description = ep.description.replace(/\s+/g, ' ').trim();
+    const wp = toWebpPaths(ep.cover);
+    ep.coverWebp = wp.big;
+    ep.coverThumb = wp.thumb;
     if (ep.ep != null) episodeIndex.set(s.name + ep.ep, eId);
     episodes[eId] = ep;
   }
@@ -182,6 +195,8 @@ for (const s of seriesOrder) {
         }
       }
       qNo += 1;
+      // 瘦身：series/seriesId/ep/subject/bvid/cover* 等字段与所属档案完全重复，
+      // 前端统一通过 episodes[q.episodeId] 推导，不在语录里重复存储
       quotes.push({
         id: ep.id + 'q' + q.n,
         n: qNo,
@@ -190,13 +205,7 @@ for (const s of seriesOrder) {
         segments,
         classic,
         time: extractTime(plain),
-        series: ep.series,
-        seriesId: ep.seriesId,
-        ep: ep.ep,
         episodeId: ep.id,
-        subject: ep.subject,
-        bvid: ep.bvid,
-        cover: ep.cover,
         refs,
       });
     }
@@ -208,7 +217,7 @@ for (const s of seriesOrder) {
 const seriesStats = seriesOrder
   .map(s => {
     const sId = seriesIdOf(s.name);
-    const qs = quotes.filter(q => q.seriesId === sId);
+    const qs = quotes.filter(q => episodes[q.episodeId] && episodes[q.episodeId].seriesId === sId);
     const eps = s.videos.map(v => v.ep).filter(x => x != null);
     return {
       id: sId,
@@ -246,6 +255,7 @@ for (const [id, e] of Object.entries(episodes)) {
   episodesOut[id] = {
     id, series: e.series, seriesId: e.seriesId, ep: e.ep, title: e.title,
     subject: e.subject, description: e.description, bvid: e.bvid, cover: e.cover,
+    coverWebp: e.coverWebp, coverThumb: e.coverThumb,
     quotes: quotes.filter(q => q.episodeId === id).map(q => q.id),
   };
 }
@@ -258,7 +268,6 @@ const out = {
   stats,
 };
 
-fs.writeFileSync(path.join(__dirname, 'data.json'), JSON.stringify(out, null, 1), 'utf-8');
 fs.writeFileSync(
   path.join(__dirname, 'data.js'),
   'window.__TLYL_DATA__ = ' + JSON.stringify(out) + ';',
